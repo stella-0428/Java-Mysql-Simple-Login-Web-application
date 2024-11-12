@@ -1,3 +1,5 @@
-FROM tomcat
+FROM tomcat:latest
 
-ADD target/LoginWebApp.war /usr/local/tomcat/webapps/LoginWebApp.war
+COPY /home/ubuntu/LoginWebApp.war /usr/local/tomcat/webapps/
+
+CMD ["catalina.sh" , "run" 
